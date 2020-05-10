@@ -1,0 +1,32 @@
+React components for front end
+mongoose data modelling for storing user and diet data
+express + node js for backend
+axios for REST to backend
+run production build
+deploy using aws s3 sync build/ s3://pradh33p --acl public-read /// can be added as a node run command by updating package.json
+update proxy in package.json to aws ec2 server endpoint and port -- 5000
+update axios urls to aws endpoints
+
+-------------------------------------------------
+EC2 -- elastic compute cloud -- openstack compute
+
+
+for the backend express and node
+choose a distro or windows server
+change the security groups for public access 0.0.0.0/0
+get the key
+if using ssh or scp ffrom local...convert the key from pem to ppk using putty
+used pscp to share files from local to instance
+installed node inside instance
+ran node server.js ...now backend is running
+db connected in backend
+
+-------------------------------------------------
+S3 - Simple Storage Service -- Openstack Swift
+
+
+for serving the frontend react
+Created a unique bucket name
+allowed access to the bucket for the public web using acl and unchecked block public access
+enabled static web hosting under properties and got the endpoint
+after getting the production build, deployed to s3 using npm run deploy
